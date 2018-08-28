@@ -1,6 +1,6 @@
 # vcpod
 
-![vcpod](./logo/logo.png)
+![vcpod](./logo/pinterest_profile_image.png)
 
 **vcpod** is a personal media server/client
 
