@@ -2,7 +2,7 @@ package secure
 
 import "crypto/tls"
 
-// CreateDummyCert は、ダミーのTLS証明書を生成する https://golang.org/pkg/crypto/tls/#example_X509KeyPair_httpServer
+// https://golang.org/pkg/crypto/tls/#example_X509KeyPair_httpServer
 func CreateDummyCert() ([]tls.Certificate, error) {
 	certPem := []byte(`-----BEGIN CERTIFICATE-----
 MIIBhTCCASugAwIBAgIQIRi6zePL6mKjOipn+dNuaTAKBggqhkjOPQQDAjASMRAw
