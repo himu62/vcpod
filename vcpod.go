@@ -5,19 +5,14 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/himu62/vcpod/api"
 	"github.com/himu62/vcpod/secure"
 	"github.com/pkg/browser"
 )
 
-type apiHandler struct{}
-
-func (h *apiHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "api mock")
-}
-
 func main() {
 	mux := http.NewServeMux()
-	mux.Handle("/api/", &apiHandler{})
+	mux.Handle("/api/", api.NewHandler())
 	mux.Handle("/", http.FileServer(http.Dir("public_html")))
 
 	cert, err := secure.CreateDummyCert()
@@ -30,6 +25,8 @@ func main() {
 		Handler:   mux,
 		TLSConfig: &tls.Config{Certificates: cert},
 	}
+
+	fmt.Printf("%#v\n", mux)
 
 	fmt.Println(`Welcome to vcpod!
 
