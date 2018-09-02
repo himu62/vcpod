@@ -1,4 +1,4 @@
-package library
+package api
 
 import (
 	"encoding/json"
@@ -8,7 +8,7 @@ import (
 	"github.com/himu62/vcpod/object"
 )
 
-func RootHandler(w http.ResponseWriter, r *http.Request) {
+func libraryRootHandler(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case http.MethodGet:
 		listRootObjects(w)
