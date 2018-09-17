@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  digest = "1:3cafc6a5a1b8269605d9df4c6956d43d8011fc57f266ca6b9d04da6c09dee548"
+  name = "github.com/mattn/go-sqlite3"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "25ecb14adfc7543176f7d85291ec7dba82c6f7e4"
+  version = "v1.9.0"
+
+[[projects]]
   branch = "master"
   digest = "1:7b4cd865877639770d2711dc6278b98466be7ebbe5cdf2c933659b73d6e58213"
   name = "github.com/pkg/browser"
@@ -9,9 +17,32 @@
   pruneopts = "UT"
   revision = "c90ca0c84f15f81c982e32665bffd8d7aac8f097"
 
+[[projects]]
+  branch = "master"
+  digest = "1:cd638908d04442c8b6afd5d0221c21556e76c5e7130448ca97d249b47d66dd41"
+  name = "github.com/rubenv/sql-migrate"
+  packages = [
+    ".",
+    "sqlparse",
+  ]
+  pruneopts = "UT"
+  revision = "3f452fc0ebebbb784fdab91f7bc79a31dcacab5c"
+
+[[projects]]
+  digest = "1:fa9a7c0ef59217bd22f32eb7cc027894d73f340a5633258cc079dec025db6a7f"
+  name = "gopkg.in/gorp.v1"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "c87af80f3cc5036b55b83d77171e156791085e2e"
+  version = "v1.7.1"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/pkg/browser"]
+  input-imports = [
+    "github.com/mattn/go-sqlite3",
+    "github.com/pkg/browser",
+    "github.com/rubenv/sql-migrate",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
