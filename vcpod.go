@@ -13,7 +13,7 @@ import (
 func main() {
 	mux := http.NewServeMux()
 	mux.Handle("/api/", api.NewHandler())
-	mux.Handle("/", http.FileServer(http.Dir("public_html")))
+	mux.Handle("/", http.FileServer(http.Dir("client/dist")))
 
 	cert, err := secure.CreateDummyCert()
 	if err != nil {
