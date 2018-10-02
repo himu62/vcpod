@@ -14,8 +14,12 @@ create table object (
     hash_type text,
     registered text, -- timestamp
     last_used text, -- timestamp
-    used text, -- timestamp delimited by comma
     score int
+);
+
+create table object_used (
+    object_id int,
+    timestamp text
 );
 
 create table favorite (
