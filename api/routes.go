@@ -6,6 +6,6 @@ import (
 
 func NewHandler() *http.ServeMux {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/api/library/root", libraryRootHandler)
+	mux.HandleFunc("/library/root", libraryRootHandler)
 	return mux
 }
